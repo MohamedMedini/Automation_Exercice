@@ -15,8 +15,13 @@ import io.cucumber.junit.CucumberOptions;
 		
 		
 		publish= true,
-	    plugin ={"pretty",
-	    		"html:target/htmlreport.html","json:target/report","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+	    plugin = {
+			    "pretty",
+			    "html:target/htmlreport.html",
+			    "json:target/cucumber-report.json",  // Ensure this is the correct path
+			    "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+			}
+
 		
 		)
 
