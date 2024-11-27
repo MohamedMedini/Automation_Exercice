@@ -1,15 +1,57 @@
+package Run;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
 @RunWith(Cucumber.class)
+
 @CucumberOptions(
-    tags = "@Payment_AUTOEX",
-    features = "src/test/resources/features/Panier", // Make sure the path is correct
-    glue = {"Hooks", "StepDefinition"},
-    publish = true,
-    plugin = {
-        "pretty",
-        "html:target/cucumber-htmlreport.html",   // Adjust path if necessary
-        "json:target/cucumber-report.json",       // Ensure this path is correct
-        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  // Correct adapter usage
-    }
-)
+		
+		tags= "@Payment_AUTOEX" ,
+		features= "src/test/features/Panier",
+		glue={"Hooks","StepDefinition"},
+		
+		
+		publish= true,
+	    plugin ={"pretty",
+	    		"html:target/htmlreport.html","json:target/report","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+		
+		)
+
+
+
+
+
 public class Runner {
+
+}package Run;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
+
+@CucumberOptions(
+		
+		tags= "@Payment_AUTOEX" ,
+		features= "src/test/features/Panier",
+		glue={"Hooks","StepDefinition"},
+		
+		
+		publish= true,
+	    plugin ={"pretty",
+	    		"html:target/htmlreport.html","json:target/report","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+		
+		)
+
+
+
+
+
+public class Runner {
+
 }
